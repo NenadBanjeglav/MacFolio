@@ -6,7 +6,7 @@ import React from "react";
 const Contact = () => {
   return (
     <>
-      <div id="window-header">
+      <div className="window-header">
         <WindowControlls target="contact" />
         <h2>Contact me</h2>
       </div>

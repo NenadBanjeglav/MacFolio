@@ -16,7 +16,7 @@ const Image = () => {
 
   return (
     <>
-      <div id="window-header">
+      <div className="window-header">
         <WindowControlls target="imgfile" />
         <p>{name || "Image"}</p>
       </div>

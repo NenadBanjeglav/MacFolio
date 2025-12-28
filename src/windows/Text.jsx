@@ -14,7 +14,7 @@ const Text = () => {
 
   return (
     <>
-      <div id="window-header">
+      <div className="window-header">
         <WindowControlls target="txtfile" />
         <h2>{name || "Untitled.txt"}</h2>
       </div>

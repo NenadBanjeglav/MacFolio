@@ -121,7 +121,7 @@ body {
     }
   }
 
-  #window-header {
+  .window-header {
     @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400;
   }
 
@@ -244,10 +244,10 @@ body {
   }
 
   #photos {
-    @apply max-w-3xl absolute top-96 left-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-3xl h-[420px] absolute top-96 left-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     .sidebar {
-      @apply w-3/12 flex-none bg-gray-50 border-r border-gray-200 flex flex-col p-5;
+      @apply w-3/12 flex-none h-full bg-gray-50 border-r border-gray-200 flex flex-col p-5;
 
       h2 {
         @apply text-xs font-medium text-gray-400 mb-1;
@@ -257,10 +257,6 @@ body {
         li {
           @apply flex space-y-1 items-center gap-2 px-3 py-2 rounded-md cursor-pointer transition-colors;
 
-          &:first-child {
-            @apply bg-blue-100 text-blue-700;
-          }
-
           img {
             @apply w-4;
           }
@@ -269,44 +265,23 @@ body {
             @apply text-sm font-medium;
           }
         }
-      }
-    }
 
-    .gallery {
-      @apply p-5;
+        li.active {
+          @apply bg-blue-100 text-blue-700;
+        }
 
-      ul {
-        @apply grid grid-cols-5 grid-rows-5 gap-2.5;
-
-        li {
-          img {
-            @apply size-full object-cover rounded-lg;
-          }
-
-          &:first-child {
-            @apply row-start-1 row-span-3 col-start-1 col-span-3;
-          }
-
-          &:nth-child(2) {
-            @apply row-start-1 row-span-3 col-start-4 col-span-2;
-          }
-
-          &:nth-child(3) {
-            @apply row-start-4 row-span-2 col-start-3 col-span-3;
-          }
-
-          &:last-child {
-            @apply row-start-4 row-span-2 col-start-1 col-span-2;
-          }
+        li.not-active {
+          @apply text-gray-700 hover:bg-gray-200;
         }
       }
     }
+
   }
 
   #resume {
     @apply w-fit h-fit absolute top-16 left-7/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
-    #window-header {
+    .window-header {
       h2 {
         @apply font-bold text-sm text-center flex-1;
       }
@@ -368,7 +343,7 @@ body {
   #imgfile {
     @apply w-xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
-    #window-header {
+    .window-header {
       p {
         @apply font-bold text-[#5f6266];
       }

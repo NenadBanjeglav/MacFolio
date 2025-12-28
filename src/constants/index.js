@@ -48,12 +48,7 @@ const dockApps = [
     icon: "safari.png",
     canOpen: true,
   },
-  {
-    id: "photos",
-    name: "Gallery", // was "Photos"
-    icon: "photos.png",
-    canOpen: true,
-  },
+
   {
     id: "contact",
     name: "Contact", // or "Get in touch"
@@ -66,12 +61,12 @@ const dockApps = [
     icon: "terminal.png",
     canOpen: true,
   },
-  {
-    id: "trash",
-    name: "Archive", // was "Trash"
-    icon: "trash.png",
-    canOpen: false,
-  },
+  // {
+  //   id: "trash",
+  //   name: "Archive", // was "Trash"
+  //   icon: "trash.png",
+  //   canOpen: false,
+  // },
 ];
 
 const blogPosts = [
@@ -163,45 +158,31 @@ const photosLinks = [
     id: 1,
     icon: "/icons/gicon1.svg",
     title: "Library",
+    category: "library",
   },
   {
     id: 2,
     icon: "/icons/gicon2.svg",
     title: "Memories",
+    category: "memories",
   },
   {
     id: 3,
     icon: "/icons/file.svg",
     title: "Places",
+    category: "places",
   },
   {
     id: 4,
     icon: "/icons/gicon4.svg",
     title: "People",
+    category: "people",
   },
   {
     id: 5,
     icon: "/icons/gicon5.svg",
     title: "Favorites",
-  },
-];
-
-const gallery = [
-  {
-    id: 1,
-    img: "/images/gal1.png",
-  },
-  {
-    id: 2,
-    img: "/images/gal2.png",
-  },
-  {
-    id: 3,
-    img: "/images/gal3.png",
-  },
-  {
-    id: 4,
-    img: "/images/gal4.png",
+    category: "favorites",
   },
 ];
 
@@ -213,7 +194,6 @@ export {
   techStack,
   socials,
   photosLinks,
-  gallery,
 };
 
 const WORK_LOCATION = {

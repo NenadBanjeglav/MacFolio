@@ -17,7 +17,7 @@ import React from "react";
 const Safari = () => {
   return (
     <>
-      <div id="window-header">
+      <div className="window-header">
         <WindowControlls target="safari" />
 
         <PanelLeft className="ml-10 icon" />

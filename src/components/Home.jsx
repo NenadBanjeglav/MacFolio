@@ -1,0 +1,45 @@
+import clsx from "clsx";
+import { useGSAP } from "@gsap/react";
+import { Draggable } from "gsap/Draggable";
+
+import useWindowStore from "#store/window";
+import useLocationStore from "#store/location";
+import { locations } from "#constants";
+
+const projects = locations.work?.children ?? [];
+
+const Home = () => {
+  const { openWindow } = useWindowStore();
+  const { setActiveLocation } = useLocationStore();
+
+  const handleOpenProjectFinder = (project) => {
+    setActiveLocation(project);
+    openWindow("finder");
+  };
+
+  useGSAP(() => {
+    Draggable.create(".folder", {
+      cursor: "pointer",
+      activeCursor: "grabbing",
+    });
+  }, []);
+
+  return (
+    <section id="home">
+      <ul>
+        {projects.map((project) => (
+          <li
+            key={project.id}
+            className={clsx("group folder cursor-pointer", project.windowPosition)}
+            onClick={() => handleOpenProjectFinder(project)}
+          >
+            <img src="/images/folder.png" />
+            <p>{project.name}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+};
+
+export default Home;
