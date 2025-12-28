@@ -1,10 +1,20 @@
-import dayjs from "dayjs";
 import { navIcons, navLinks } from "#constants";
 import React from "react";
 import useWindowStore from "#store/window";
+import dayjs from "dayjs";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const { openWindow } = useWindowStore();
+  const [now, setNow] = useState(() => dayjs());
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setNow(dayjs());
+    }, 60000);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <nav>
@@ -30,7 +40,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <time>{dayjs().format("ddd MMM D h:mm A")} </time>
+        <time>{now.format("ddd MMM D h:mm A")} </time>
       </div>
     </nav>
   );

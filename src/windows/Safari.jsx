@@ -15,6 +15,8 @@ import {
 import React from "react";
 
 const Safari = () => {
+  const hasPosts = blogPosts?.length > 0;
+
   return (
     <>
       <div className="window-header">
@@ -51,21 +53,32 @@ const Safari = () => {
         <h2>My Developer Blog</h2>
 
         <div className="space-y-8">
-          {blogPosts.map(({ id, image, title, date, link }) => (
-            <div key={id} className="blog-post">
-              <div className="col-span-2">
-                <img src={image} alt={title} />
-              </div>
+          {hasPosts ? (
+            blogPosts.map(({ id, image, title, date, link }) => (
+              <div key={id} className="blog-post">
+                <div className="col-span-2">
+                  <img src={image} alt={title} />
+                </div>
 
-              <div className="content">
-                <p>{date}</p>
-                <h3>{title}</h3>
-                <a href={link} target="_blank" rel="noopener noreferrer">
-                  Check out the full post <MoveRight className="icon-hover" />
-                </a>
+                <div className="content">
+                  <p>{date}</p>
+                  <h3>{title}</h3>
+                  <a href={link} target="_blank" rel="noopener noreferrer">
+                    Check out the full post <MoveRight className="icon-hover" />
+                  </a>
+                </div>
               </div>
+            ))
+          ) : (
+            <div className="rounded-lg border border-dashed border-gray-300 p-8 text-center text-gray-600">
+              <p className="text-base font-semibold text-gray-700">
+                No articles yet
+              </p>
+              <p className="mt-2 text-sm">
+                I am working on a few posts. Check back soon for updates.
+              </p>
             </div>
-          ))}
+          )}
         </div>
       </div>
     </>
