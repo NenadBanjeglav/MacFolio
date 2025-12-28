@@ -103,6 +103,13 @@ body {
 
     .close {
       @apply size-3.5 rounded-full bg-[#ff6157] cursor-pointer;
+      position: relative;
+    }
+
+    .close::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
     }
 
     .minimize {

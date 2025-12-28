@@ -102,27 +102,28 @@ const blogPosts = [
 const techStack = [
   {
     category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
-  },
-  {
-    category: "Mobile",
-    items: ["React Native", "Expo"],
+    items: ["JavaScript", "TypeScript", "React.js", "Next.js"],
   },
   {
     category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
+    items: ["CSS", "Styled Components", "Tailwind CSS"],
+  },
+  {
+    category: "Animation",
+    items: ["GSAP", "Framer Motion"],
+  },
+
+  {
+    category: "Dev Tools",
+    items: ["GitHub", "Vite", "NPM", "Vercel"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    items: ["Sanity CMS", "Supabase"],
   },
   {
-    category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
-  },
-  {
-    category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    category: "Testing",
+    items: ["Vitest", "Jest", "RTL", "MSW", "Playwright"],
   },
 ];
 
