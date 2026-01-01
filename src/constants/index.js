@@ -44,8 +44,14 @@ const dockApps = [
   },
   {
     id: "safari",
-    name: "Articles", // was "Safari"
+    name: "Testimonials", // was "Safari"
     icon: "safari.png",
+    canOpen: true,
+  },
+  {
+    id: "resume",
+    name: "Resume",
+    icon: "pages.png",
     canOpen: true,
   },
 
@@ -94,6 +100,45 @@ const blogPosts = [
   // },
 ];
 
+const testimonialsGallery = [
+  {
+    id: 1,
+    name: "bojan-milovanovic.png",
+    icon: "/images/image.png",
+    imageUrl: "/images/testimonials/bojan-milovanovic.png",
+  },
+  {
+    id: 2,
+    name: "bojan-vreco.png",
+    icon: "/images/image.png",
+    imageUrl: "/images/testimonials/bojan-vreco.png",
+  },
+  {
+    id: 3,
+    name: "boris-sulicenko.png",
+    icon: "/images/image.png",
+    imageUrl: "/images/testimonials/boris-sulicenko.png",
+  },
+  {
+    id: 4,
+    name: "dragan-prtljaga.png",
+    icon: "/images/image.png",
+    imageUrl: "/images/testimonials/dragan-prtljaga.png",
+  },
+  {
+    id: 5,
+    name: "marko-jovic.png",
+    icon: "/images/image.png",
+    imageUrl: "/images/testimonials/marko-jovic.png",
+  },
+  {
+    id: 6,
+    name: "nikola-karaklic.png",
+    icon: "/images/image.png",
+    imageUrl: "/images/testimonials/nikola-karaklic.png",
+  },
+];
+
 const techStack = [
   {
     category: "Frontend",
@@ -140,7 +185,44 @@ const socials = [
   },
 ];
 
-export { navLinks, navIcons, dockApps, blogPosts, techStack, socials };
+const photosLinks = [
+  {
+    id: 1,
+    icon: "/icons/gicon1.svg",
+    title: "Library",
+  },
+  {
+    id: 2,
+    icon: "/icons/gicon2.svg",
+    title: "Memories",
+  },
+  {
+    id: 3,
+    icon: "/icons/file.svg",
+    title: "Places",
+  },
+  {
+    id: 4,
+    icon: "/icons/gicon4.svg",
+    title: "People",
+  },
+  {
+    id: 5,
+    icon: "/icons/gicon5.svg",
+    title: "Favorites",
+  },
+];
+
+export {
+  navLinks,
+  navIcons,
+  dockApps,
+  blogPosts,
+  testimonialsGallery,
+  techStack,
+  socials,
+  photosLinks,
+};
 
 const WORK_LOCATION = {
   id: 1,

@@ -2,13 +2,26 @@ import useWindowStore from "#store/window";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 const WindowWrapper = (Component, windowKey) => {
   const Wrapped = (props) => {
+    const key = props.windowKey || windowKey;
     const { focusWindow, windows } = useWindowStore();
-    const { isOpen, zIndex } = windows[windowKey] || {};
+    const { isOpen, zIndex } = windows[key] || {};
     const ref = useRef(null);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+      const checkMobile = () => {
+        setIsMobile(window.innerWidth < 640);
+      };
+
+      checkMobile();
+      window.addEventListener("resize", checkMobile);
+
+      return () => window.removeEventListener("resize", checkMobile);
+    }, []);
 
     useGSAP(() => {
       const el = ref.current;
@@ -29,7 +42,7 @@ const WindowWrapper = (Component, windowKey) => {
 
       const [instance] = Draggable.create(el, {
         handle: el.querySelector(".window-header"),
-        onPress: () => focusWindow(windowKey),
+        onPress: () => focusWindow(key),
       });
 
       return () => instance.kill();
@@ -43,10 +56,15 @@ const WindowWrapper = (Component, windowKey) => {
       el.style.display = isOpen ? "block" : "none";
     }, [isOpen]);
 
-    if (!isOpen) return null;
+    if (isMobile || !isOpen) return null;
 
     return (
-      <section id={windowKey} ref={ref} style={{ zIndex }} className="absolute">
+      <section
+        id={key}
+        ref={ref}
+        style={{ zIndex, ...(props.style || {}) }}
+        className={["absolute", props.className].filter(Boolean).join(" ")}
+      >
         <Component {...props} />
       </section>
     );

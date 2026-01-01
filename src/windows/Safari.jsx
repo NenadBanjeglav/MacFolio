@@ -1,85 +1,45 @@
 import { WindowControlls } from "#components";
-import { blogPosts } from "#constants";
+import { testimonialsGallery } from "#constants";
 import WindowWrapper from "#hoc/WindowWrapper";
-import {
-  ChevronLeft,
-  ChevronRight,
-  Copy,
-  MoveRight,
-  PanelLeft,
-  Plus,
-  Search,
-  Share,
-  ShieldHalf,
-} from "lucide-react";
+import useWindowStore from "#store/window";
 import React from "react";
 
 const Safari = () => {
-  const hasPosts = blogPosts?.length > 0;
+  const { openWindow } = useWindowStore();
+  const hasTestimonials = testimonialsGallery?.length > 0;
 
   return (
     <>
       <div className="window-header">
         <WindowControlls target="safari" />
-
-        <PanelLeft className="ml-10 icon" />
-
-        <div className="flex items-center gap-1 ml-5">
-          <ChevronLeft className="icon" />
-          <ChevronRight className="icon" />
-        </div>
-
-        <div className="flex-1 flex-center gap-3">
-          <ShieldHalf className="icon" />
-
-          <div className="search">
-            <Search className="icon" />
-            <input
-              type="text"
-              placeholder="Search or enter website name"
-              className="flex-1"
-            />
-          </div>
-        </div>
-
-        <div className="flex items-center gap-5">
-          <Share className="icon" />
-          <Plus className="icon" />
-          <Copy className="icon" />
-        </div>
+        <h2>Testimonials</h2>
       </div>
 
-      <div className="blog">
-        <h2>My Developer Blog</h2>
-
-        <div className="space-y-8">
-          {hasPosts ? (
-            blogPosts.map(({ id, image, title, date, link }) => (
-              <div key={id} className="blog-post">
-                <div className="col-span-2">
-                  <img src={image} alt={title} />
-                </div>
-
-                <div className="content">
-                  <p>{date}</p>
-                  <h3>{title}</h3>
-                  <a href={link} target="_blank" rel="noopener noreferrer">
-                    Check out the full post <MoveRight className="icon-hover" />
-                  </a>
-                </div>
-              </div>
-            ))
-          ) : (
-            <div className="rounded-lg border border-dashed border-gray-300 p-8 text-center text-gray-600">
-              <p className="text-base font-semibold text-gray-700">
-                No articles yet
-              </p>
-              <p className="mt-2 text-sm">
-                I am working on a few posts. Check back soon for updates.
-              </p>
-            </div>
-          )}
-        </div>
+      <div className="testimonials">
+        {hasTestimonials && (
+          <ul className="files-grid">
+            {testimonialsGallery.map(({ id, name, icon, imageUrl }) => (
+              <li
+                key={id}
+                className="file-card"
+                onClick={() =>
+                  openWindow(`imgfile-testimonial-${id}`, {
+                    id,
+                    name,
+                    title: name,
+                    icon,
+                    kind: "file",
+                    fileType: "img",
+                    imageUrl,
+                  })
+                }
+              >
+                <img src={icon} alt={name} />
+                <p>{name}</p>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </>
   );

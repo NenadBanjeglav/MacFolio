@@ -8,6 +8,22 @@ import { Tooltip } from "react-tooltip";
 const Dock = () => {
   const dockRef = React.useRef(null);
   const { openWindow, closeWindow, windows } = useWindowStore();
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const visibleApps = isMobile
+    ? dockApps.filter(({ id }) => id !== "resume" && id !== "terminal")
+    : dockApps;
 
   useGSAP(() => {
     const dock = dockRef.current;
@@ -55,7 +71,7 @@ const Dock = () => {
       dock.removeEventListener("mousemove", handleMouseMove);
       dock.removeEventListener("mouseleave", resetIcons);
     };
-  }, []);
+  }, [visibleApps.length]);
 
   const toggleApp = (app) => {
     if (!app.canOpen) return;
@@ -73,7 +89,7 @@ const Dock = () => {
   return (
     <section id="dock">
       <div ref={dockRef} className="dock-container">
-        {dockApps.map(({ id, name, icon, canOpen }) => (
+        {visibleApps.map(({ id, name, icon, canOpen }) => (
           <div key={id} className="relative flex justify-center">
             <button
               type="button"
@@ -91,7 +107,7 @@ const Dock = () => {
                 src={`/images/${icon}`}
                 alt={name}
                 loading="lazy"
-                className={canOpen ? "" : "opacity-60"}
+                className={canOpen ? "w-full h-full object-contain" : "w-full h-full object-contain opacity-60"}
               />
             </button>
           </div>
