@@ -35,7 +35,7 @@ const Finder = () => {
           bounds,
           cursor: "pointer",
           activeCursor: "grabbing",
-        })[0]
+        })[0],
     );
 
     return () => {
@@ -47,7 +47,7 @@ const Finder = () => {
     items.map((item) => (
       <li
         className={clsx(
-          item.id === activeLocation.id ? "active" : "not-active"
+          item.id === activeLocation.id ? "active" : "not-active",
         )}
         key={item.id}
         onClick={() => setActiveLocation(item)}

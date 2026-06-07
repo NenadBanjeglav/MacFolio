@@ -5,7 +5,7 @@ import { useState, useRef, useLayoutEffect } from "react";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
-  import.meta.url
+  import.meta.url,
 ).toString();
 
 import "react-pdf/dist/Page/AnnotationLayer.css";

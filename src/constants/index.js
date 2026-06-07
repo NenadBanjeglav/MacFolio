@@ -142,28 +142,27 @@ const testimonialsGallery = [
 const techStack = [
   {
     category: "Frontend",
-    items: ["JavaScript", "TypeScript", "React.js", "Next.js"],
+    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Radix UI"],
   },
   {
-    category: "Styling",
-    items: ["CSS", "Styled Components", "Tailwind CSS"],
+    category: "Data / APIs",
+    items: ["REST", "GraphQL BFF", "PostgreSQL", "Prisma", "Drizzle ORM"],
   },
   {
-    category: "Animation",
-    items: ["GSAP", "Framer Motion"],
-  },
-
-  {
-    category: "Dev Tools",
-    items: ["GitHub", "Vite", "NPM", "Vercel"],
+    category: "Testing / AI",
+    items: ["Vitest", "RTL", "MSW", "Playwright", "Cursor", "Codex"],
   },
   {
-    category: "Backend",
-    items: ["Sanity CMS", "Supabase"],
+    category: "Delivery",
+    items: ["React Native", "Expo", "Vite", "Docker", "Git", "Vercel"],
   },
   {
-    category: "Testing",
-    items: ["Vitest", "Jest", "RTL", "MSW", "Playwright"],
+    category: "Product UI",
+    items: ["Storybook", "Zustand", "TanStack Query", "GSAP", "Framer Motion"],
+  },
+  {
+    category: "CMS / Email",
+    items: ["Sanity CMS", "Supabase", "Neon", "Resend"],
   },
 ];
 
@@ -231,14 +230,97 @@ const WORK_LOCATION = {
   icon: "/icons/work.svg",
   kind: "folder",
   children: [
+    {
+      id: 4,
+      name: "GreenState / ClickMind",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-10 left-5",
+      windowPosition: "top-[6vh] left-5",
+      children: [
+        {
+          id: 1,
+          name: "production-impact.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          subtitle: "Production React product work for 20k+ active users",
+          description: [
+            "Frontend Developer at GreenState AG / ClickMind.com, shipping product features in a multi-tenant React and TypeScript application used by 20k+ active users across Europe.",
+            "Own product flows from UX and API contract coordination through validation, loading and error states, QA follow-up, and release monitoring.",
+            "Implemented Stripe Checkout across the checkout UX and API integration path, with no reported checkout defects after release.",
+          ],
+        },
+        {
+          id: 2,
+          name: "testing-ai-workflows.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-40 right-20",
+          subtitle: "Testing coverage and AI-assisted engineering",
+          description: [
+            "Introduced frontend testing from zero coverage with Vitest, React Testing Library, MSW, and Playwright across unit, API-mocked, integration, and browser-level regression checks.",
+            "Helped lead a design-system migration from Styled Components and Storybook 8 toward Radix UI, Tailwind CSS, and Storybook 10 using a strangler approach.",
+            "Ran team workshops on agentic development workflows and connected Jira/Confluence context to IT-ready product briefs using AI-assisted planning patterns.",
+          ],
+        },
+        {
+          id: 3,
+          name: "clickmind.com",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://www.clickmind.com/",
+          position: "top-10 right-20",
+        },
+      ],
+    },
+    {
+      id: 6,
+      name: "Mobile Product Lab",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-52 left-5",
+      windowPosition: "top-[27vh] left-5",
+      children: [
+        {
+          id: 1,
+          name: "sveznalica.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          subtitle: "React Native educational app",
+          description: [
+            "Built Sveznalica, a React Native and Expo educational app currently in Google Play closed testing.",
+            "Owned mobile UI, navigation, Android build and testing flow, store-readiness work, and iteration toward a releasable product.",
+          ],
+        },
+        {
+          id: 2,
+          name: "psfm-diet-tracker.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-40 right-20",
+          subtitle: "Mobile-first diet tracking product",
+          description: [
+            "Built PSFM Diet Tracker as a React Native and Expo product with reusable screens, forms, stateful flows, and mobile-first UX.",
+            "Structured the app with API-ready boundaries so data integrations can be added without reshaping the main user flows.",
+          ],
+        },
+      ],
+    },
     // ▶ Project 1
     {
       id: 5,
-      name: "Auto Škola Drive Team",
+      name: "Auto Skola Drive Team",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-10 left-5", // icon position inside Finder
-      windowPosition: "top-[5vh] left-5", // optional: Finder window position
+      position: "top-10 left-60", // icon position inside Finder
+      windowPosition: "top-[48vh] left-5", // optional: Finder window position
       children: [
         {
           id: 1,
@@ -248,10 +330,10 @@ const WORK_LOCATION = {
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "A modern, responsive landing page for Auto Škola Drive Team in Novi Sad.",
-            "Built with Next.js, Tailwind CSS, and Framer Motion for smooth, engaging motion.",
-            "Clear sections for pricing, sign-up, and FAQs to reduce friction for new students.",
-            "Designed to feel friendly and trustworthy while driving inquiries.",
+            "A modern, responsive landing page for Auto Skola Drive Team in Novi Sad.",
+            "Built with Next.js, Tailwind CSS, and Framer Motion for a fast, polished first impression.",
+            "Structured pricing, sign-up, and FAQ flows to reduce friction for new students and drive inquiries.",
+            "Designed the UI to feel clear, credible, and easy to scan across devices.",
           ],
         },
         {
@@ -282,7 +364,7 @@ const WORK_LOCATION = {
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
-      windowPosition: "top-[20vh] left-7",
+      windowPosition: "top-[6vh] right-5",
       children: [
         {
           id: 1,
@@ -292,9 +374,9 @@ const WORK_LOCATION = {
           fileType: "txt",
           position: "top-5 right-10",
           description: [
-            "A clean, professional website for a Serbian construction company.",
-            "Content is managed in Sanity CMS so the team can update projects without developer help.",
-            "Built with a focus on clarity, credibility, and showcasing real work.",
+            "A clean, professional website for a Serbian construction company, focused on trust and project discovery.",
+            "Content is managed in Sanity CMS so the team can update construction projects without developer handoff.",
+            "Built with Next.js and Tailwind CSS with a content structure designed for credibility and easy scanning.",
           ],
         },
         {
@@ -325,7 +407,7 @@ const WORK_LOCATION = {
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
-      windowPosition: "top-[33vh] left-7",
+      windowPosition: "top-[27vh] right-5",
       children: [
         {
           id: 1,
@@ -336,8 +418,8 @@ const WORK_LOCATION = {
           position: "top-5 left-10",
           description: [
             "A presentation website for Pro Decor, specializing in 3D and PVC wall panels.",
-            "Organized product categories and galleries make browsing quick and visual.",
-            "Built with Next.js, TypeScript, and Tailwind CSS for a crisp, modern UI.",
+            "Organized product categories and galleries so buyers can browse materials visually and quickly.",
+            "Built with Next.js, TypeScript, and Tailwind CSS for a crisp, responsive product showcase.",
           ],
         },
         {
@@ -367,7 +449,7 @@ const WORK_LOCATION = {
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 left-60",
-      windowPosition: "top-[45vh] left-50",
+      windowPosition: "top-[48vh] right-5",
       children: [
         {
           id: 1,
@@ -377,9 +459,9 @@ const WORK_LOCATION = {
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "A blog about agile, scrum, and personal development.",
-            "Built with Next.js using SSG + ISR for fast, fresh content.",
-            "Powered by Sanity CMS for structured content and easy updates.",
+            "A content-driven blog about agile, scrum, and personal development.",
+            "Built with Next.js using SSG and ISR so pages stay fast while content can be refreshed.",
+            "Powered by Sanity CMS for structured authoring, SEO-friendly pages, and easy publishing.",
           ],
         },
         {
@@ -438,13 +520,13 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "txt",
       position: "top-60 left-5",
-      subtitle: "Meet the Developer Behind the Code",
+      subtitle: "Full-stack product engineer focused on impact",
       image: "/images/me.png",
       description: [
-        "Hey! I’m Nenad 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-        "I specialize in JavaScript, TypeScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
-        "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-        "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+        "I build React and TypeScript product UX, API-integrated flows, testing infrastructure, and AI-assisted development workflows.",
+        "At GreenState AG / ClickMind.com, I ship production features in a multi-tenant product used by 20k+ active users across Europe.",
+        "My work spans checkout UX, data-heavy screens, API contracts, validation, loading and error states, regression coverage, and release follow-up.",
+        "I move quickly across unfamiliar stacks while keeping the product polished, the data flow understandable, and the codebase maintainable.",
       ],
     },
   ],

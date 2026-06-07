@@ -9,21 +9,18 @@ const MobileContactContent = () => {
 
       <div className="content">
         <div className="contact-card">
-          <img src="/images/me.png" alt="Adrian" className="avatar" />
+          <img src="/images/me.png" alt="Nenad" className="avatar" />
 
           <div className="copy">
-            <h3>Let's Connect</h3>
+            <h3>Let's Build</h3>
             <p>
-              Have an idea you're excited about? Want a hand with the frontend?
-              Or just feel like saying hi? Drop me a note with a few details,
-              and I'll get back to you as soon as I can.
+              I build React and TypeScript product experiences, API-backed
+              flows, testing coverage, and AI-assisted engineering workflows.
+              Send a few details and I will get back to you.
             </p>
           </div>
 
-          <a
-            href="mailto:nenad.banjeglav.dev@gmail.com"
-            className="email-link"
-          >
+          <a href="mailto:nenad.banjeglav.dev@gmail.com" className="email-link">
             nenad.banjeglav.dev@gmail.com
           </a>
         </div>

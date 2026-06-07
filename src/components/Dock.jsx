@@ -61,7 +61,7 @@ const Dock = () => {
           y: 0,
           duration: 0.3,
           ease: "power1.out",
-        })
+        }),
       );
 
     dock.addEventListener("mousemove", handleMouseMove);
@@ -107,7 +107,11 @@ const Dock = () => {
                 src={`/images/${icon}`}
                 alt={name}
                 loading="lazy"
-                className={canOpen ? "w-full h-full object-contain" : "w-full h-full object-contain opacity-60"}
+                className={
+                  canOpen
+                    ? "w-full h-full object-contain"
+                    : "w-full h-full object-contain opacity-60"
+                }
               />
             </button>
           </div>

@@ -14,25 +14,22 @@ const MobileWindowWrapper = (Component, windowKey) => {
       };
 
       checkMobile();
-      window.addEventListener('resize', checkMobile);
+      window.addEventListener("resize", checkMobile);
 
-      return () => window.removeEventListener('resize', checkMobile);
+      return () => window.removeEventListener("resize", checkMobile);
     }, []);
 
     useLayoutEffect(() => {
       const el = document.getElementById(`mobile-${windowKey}`);
       if (!el) return;
-      el.style.display = (isOpen && isMobile) ? "block" : "none";
+      el.style.display = isOpen && isMobile ? "block" : "none";
     }, [isOpen, isMobile]);
 
     // Don't render on desktop
     if (!isMobile || !isOpen) return null;
 
     return (
-      <section
-        id={`mobile-${windowKey}`}
-        style={{ zIndex }}
-      >
+      <section id={`mobile-${windowKey}`} style={{ zIndex }}>
         <Component {...props} />
       </section>
     );

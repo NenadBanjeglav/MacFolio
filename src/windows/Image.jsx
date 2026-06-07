@@ -33,7 +33,7 @@ const ImageWindow = WindowWrapper(ImageContent, "imgfile");
 const ImageStack = () => {
   const { windows } = useWindowStore();
   const imageKeys = Object.keys(windows).filter((key) =>
-    key.startsWith("imgfile")
+    key.startsWith("imgfile"),
   );
 
   if (!imageKeys.length) return null;

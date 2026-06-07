@@ -75,15 +75,17 @@ const Welcome = () => {
     <section id="welcome">
       <p ref={subtitleRef}>
         {renderText(
-          "Hey, I'm Nenad! Welcome to my",
-          "text-3xl font-georama",
-          100
+          "Full-stack Product Engineer",
+          "text-2xl md:text-3xl font-georama",
+          100,
         )}
       </p>
       <h1 ref={titleRef} className="mt-7">
-        {renderText("Portfolio", "text-9xl italic font-georama")}
+        {renderText(
+          "Nenad Banjeglav",
+          "text-7xl md:text-8xl xl:text-9xl italic font-georama",
+        )}
       </h1>
-
     </section>
   );
 };

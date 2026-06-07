@@ -6,4 +6,12 @@ import Home from "./Home";
 import MobileNavbar from "./mobile/Navbar";
 import MobileHome from "./mobile/Home";
 
-export { Navbar, Welcome, Dock, WindowControlls, Home, MobileNavbar, MobileHome };
+export {
+  Navbar,
+  Welcome,
+  Dock,
+  WindowControlls,
+  Home,
+  MobileNavbar,
+  MobileHome,
+};

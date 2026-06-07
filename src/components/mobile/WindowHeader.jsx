@@ -18,7 +18,7 @@ const MobileWindowHeader = ({ windowKey, title, onBack, className = "" }) => {
       id="mobile-window-header"
       className={clsx(
         "flex justify-between items-center gap-5 px-3 pb-3 relative z-10",
-        className
+        className,
       )}
     >
       <div

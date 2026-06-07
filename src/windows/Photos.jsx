@@ -30,9 +30,7 @@ const Photos = () => {
             {photosLinks.map(({ id, icon, title }) => (
               <li
                 key={id}
-                className={clsx(
-                  activeId === id ? "active" : "not-active"
-                )}
+                className={clsx(activeId === id ? "active" : "not-active")}
                 onClick={() => setActiveId(id)}
               >
                 <img src={icon} alt={title} />
@@ -41,7 +39,6 @@ const Photos = () => {
             ))}
           </ul>
         </div>
-
       </div>
     </>
   );

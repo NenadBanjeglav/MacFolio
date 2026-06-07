@@ -264,7 +264,7 @@ body {
           }
 
           ul {
-            @apply flex items-center gap-3;
+            @apply flex flex-wrap items-center gap-x-3 gap-y-1;
           }
         }
       }
@@ -467,7 +467,6 @@ body {
         }
       }
     }
-
   }
 
   #mobile-photos {
