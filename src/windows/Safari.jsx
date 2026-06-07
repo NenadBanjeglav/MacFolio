@@ -34,7 +34,12 @@ const Safari = () => {
                   })
                 }
               >
-                <img src={icon} alt={name} />
+                <img
+                  src={icon}
+                  alt={name}
+                  loading="lazy"
+                  decoding="async"
+                />
                 <p>{name}</p>
               </li>
             ))}

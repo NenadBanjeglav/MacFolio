@@ -163,7 +163,7 @@ body {
         }
 
         p {
-          @apply text-xs text-gray-700 text-center truncate w-full;
+          @apply w-full break-words text-center text-xs leading-tight text-gray-700 line-clamp-2;
         }
       }
     }
@@ -215,7 +215,7 @@ body {
         }
 
         p {
-          @apply text-xs text-gray-700 text-center truncate w-full;
+          @apply w-full break-words text-center text-xs leading-tight text-gray-700 line-clamp-2;
         }
       }
     }
