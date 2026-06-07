@@ -556,6 +556,22 @@ body {
     .resume-spinner {
       @apply size-6 rounded-full border-2 border-gray-300 border-t-gray-500 animate-spin;
     }
+
+    .resume-mobile-error {
+      @apply mx-5 max-w-sm rounded-2xl border border-gray-200 bg-white p-5 text-center shadow-sm;
+    }
+
+    .resume-error-title {
+      @apply text-sm font-semibold text-gray-700;
+    }
+
+    .resume-error-text {
+      @apply mt-1 mb-3 text-xs text-gray-500;
+    }
+
+    .resume-link {
+      @apply text-sm font-medium text-blue-600 hover:underline;
+    }
   }
 
   #finder {

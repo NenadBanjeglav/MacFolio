@@ -14,6 +14,7 @@ import "react-pdf/dist/Page/TextLayer.css";
 const MobileResumeContent = () => {
   const containerRef = useRef(null);
   const [containerWidth, setContainerWidth] = useState(0);
+  const [hasError, setHasError] = useState(false);
 
   useLayoutEffect(() => {
     if (!containerRef.current) return;
@@ -42,6 +43,20 @@ const MobileResumeContent = () => {
         <Document
           className="resume-pdf"
           file="files/resume.pdf"
+          onLoadError={() => setHasError(true)}
+          error={
+            <div className="resume-loading">
+              <div className="resume-mobile-error">
+                <p className="resume-error-title">Unable to load Resume.pdf</p>
+                <p className="resume-error-text">
+                  Please try again or download the file directly.
+                </p>
+                <a href="files/resume.pdf" download className="resume-link">
+                  Download Resume.pdf
+                </a>
+              </div>
+            </div>
+          }
           loading={
             <div className="resume-loading">
               <span className="resume-spinner" aria-hidden="true" />
@@ -49,17 +64,19 @@ const MobileResumeContent = () => {
           }
           noData={null}
         >
-          <Page
-            pageNumber={1}
-            width={containerWidth || undefined}
-            renderTextLayer
-            renderAnnotationLayer
-            loading={
-              <div className="resume-loading">
-                <span className="resume-spinner" aria-hidden="true" />
-              </div>
-            }
-          />
+          {!hasError ? (
+            <Page
+              pageNumber={1}
+              width={containerWidth || undefined}
+              renderTextLayer
+              renderAnnotationLayer
+              loading={
+                <div className="resume-loading">
+                  <span className="resume-spinner" aria-hidden="true" />
+                </div>
+              }
+            />
+          ) : null}
         </Document>
       </div>
     </>
