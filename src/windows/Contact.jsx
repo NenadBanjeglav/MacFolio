@@ -38,10 +38,16 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   title={text}
+                  aria-label={text}
                   className="social-link"
                 >
                   <span className="social-icon">
-                    <img src={icon} alt={text} className="size-5" />
+                    <img
+                      src={icon}
+                      alt=""
+                      aria-hidden="true"
+                      className="size-5"
+                    />
                   </span>
                   <span className="social-text">{text}</span>
                 </a>

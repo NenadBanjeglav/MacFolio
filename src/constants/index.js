@@ -169,7 +169,7 @@ const techStack = [
 const socials = [
   {
     id: 1,
-    text: "Github",
+    text: "GitHub",
     icon: "/icons/github.svg",
     bg: "#f4656b",
     link: "https://github.com/NenadBanjeglav",
