@@ -732,24 +732,46 @@ body {
   }
 
   #mobile-home {
-    @apply px-5 pt-5 sm:hidden;
+    @apply px-5 pb-32 pt-6 sm:hidden;
 
-    ul {
-      @apply flex flex-wrap gap-3;
+    .launcher-grid {
+      @apply grid grid-cols-3 gap-x-4 gap-y-6;
+    }
 
-      li {
-        @apply hover:scale-105 origin-center transition-all duration-300 cursor-pointer;
+    .launcher-item {
+      @apply min-w-0;
+    }
 
-        img {
-          @apply size-20 object-cover rounded-lg;
-        }
+    .launcher-item button {
+      @apply flex w-full min-w-0 flex-col items-center gap-2 rounded-2xl p-1 text-white transition-transform duration-200 active:scale-95;
+    }
 
-        &:last-child {
-          img {
-            @apply size-[5.25rem];
-          }
-        }
-      }
+    .launcher-item .icon-shell {
+      @apply flex size-16 items-center justify-center rounded-2xl bg-white/20 shadow-lg backdrop-blur-md;
+    }
+
+    .launcher-item img {
+      @apply size-12 object-contain;
+    }
+
+    .launcher-item .app-label {
+      @apply block w-full max-w-[6.5rem] text-center text-xs font-medium leading-tight text-white drop-shadow line-clamp-2;
+    }
+
+    .launcher-item.featured {
+      @apply col-span-3;
+    }
+
+    .launcher-item.featured button {
+      @apply min-h-24 flex-row justify-start gap-4 rounded-3xl bg-white/20 px-5 py-4 text-left shadow-xl backdrop-blur-xl;
+    }
+
+    .launcher-item.featured .icon-shell {
+      @apply size-16 flex-none bg-white/30;
+    }
+
+    .launcher-item.featured .app-label {
+      @apply max-w-none text-left text-lg font-semibold;
     }
   }
 }
