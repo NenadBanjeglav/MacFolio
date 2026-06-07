@@ -611,7 +611,7 @@ const WORK_LOCATION = {
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
-          imageUrl: "/images/DriveTeamPic.png",
+          imageUrl: "/images/DriveTeamPic.webp",
         },
       ],
     },
@@ -640,7 +640,7 @@ const WORK_LOCATION = {
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
-          imageUrl: "/images/pejovicInvestSS.png",
+          imageUrl: "/images/pejovicInvestSS.webp",
         },
       ],
     },
@@ -669,7 +669,7 @@ const WORK_LOCATION = {
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
-          imageUrl: "/images/prodecorSS.png",
+          imageUrl: "/images/prodecorSS.webp",
         },
       ],
     },
@@ -718,7 +718,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/me.png",
+      imageUrl: "/images/me.webp",
     },
     {
       id: 2,
@@ -727,7 +727,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-50",
-      imageUrl: "/images/me-with-the-team.png",
+      imageUrl: "/images/me-with-the-team.webp",
     },
 
     {
@@ -738,7 +738,7 @@ const ABOUT_LOCATION = {
       fileType: "txt",
       position: "top-60 left-5",
       subtitle: "Full-stack product engineer focused on impact",
-      image: "/images/me.png",
+      image: "/images/me.webp",
       description: [
         "I build React and TypeScript product UX, API-integrated flows, testing infrastructure, and AI-assisted development workflows.",
         "At GreenState AG / ClickMind.com, I ship production features in a multi-tenant product used by 20k+ active users across Europe.",

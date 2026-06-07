@@ -7,7 +7,10 @@ body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
-  background-image: url("/images/wallpaper.png");
+  background-image: image-set(
+    url("/images/wallpaper.webp") type("image/webp"),
+    url("/images/wallpaper.png") type("image/png")
+  );
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
