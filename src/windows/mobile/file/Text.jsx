@@ -1,7 +1,7 @@
 import MobileWindowWrapper from "#hoc/MobileWindowWrapper";
 import MobileWindowHeader from "#components/mobile/WindowHeader";
 import useWindowStore from "#store/window";
-import React from "react";
+import TextFileBody from "../../file/TextFileBody";
 
 const MobileTextContent = () => {
   const {
@@ -12,20 +12,11 @@ const MobileTextContent = () => {
 
   if (!data) return null;
 
-  const { name, image, subtitle, description } = data;
-
   return (
     <>
-      <MobileWindowHeader windowKey="txtfile" title="Preview" />
+      <MobileWindowHeader windowKey="txtfile" title={data.name || "Preview"} />
 
-      <div className="px-5 pb-5 pt-10 space-y-7">
-        {image && <img src={image} alt={name} className="w-20 rounded-full" />}
-
-        {subtitle && <h1 className="font-bold">{subtitle}</h1>}
-
-        {Array.isArray(description) &&
-          description.map((text, i) => <p key={i}>{text}</p>)}
-      </div>
+      <TextFileBody data={data} variant="mobile" />
     </>
   );
 };

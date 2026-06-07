@@ -646,6 +646,30 @@ body {
     @apply w-screen h-screen bg-white select-none absolute top-0 pt-20 z-60 sm:hidden overflow-y-auto;
   }
 
+  .text-file-body {
+    @apply space-y-4;
+  }
+
+  .text-file-body-desktop {
+    @apply p-6;
+  }
+
+  .text-file-body-mobile {
+    @apply px-5 pb-28 pt-6;
+  }
+
+  .text-file-section {
+    @apply space-y-2 border-t border-gray-100 pt-4 first:border-t-0 first:pt-0;
+  }
+
+  .text-file-actions {
+    @apply grid grid-cols-1 gap-2 pt-2 sm:grid-cols-3;
+  }
+
+  .text-file-action {
+    @apply rounded-md border border-gray-200 bg-gray-50 px-3 py-2 text-sm font-medium text-gray-800 transition-colors hover:bg-gray-100 active:bg-gray-200;
+  }
+
   #imgfile,
   .imgfile-window {
     @apply w-xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-sm:hidden;
