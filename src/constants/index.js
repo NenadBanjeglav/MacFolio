@@ -212,6 +212,95 @@ const photosLinks = [
   },
 ];
 
+const startHereFile = {
+  id: "start-here",
+  name: "Start Here.txt",
+  icon: "/images/txt.png",
+  kind: "file",
+  fileType: "txt",
+  subtitle: "Full-stack Product Engineer",
+  sections: [
+    {
+      heading: "Current Production Work",
+      body: [
+        "Frontend Developer at GreenState AG / ClickMind.com, shipping React and TypeScript product work in a multi-tenant application used by 20k+ active users across Europe.",
+      ],
+    },
+    {
+      heading: "What I Ship",
+      body: [
+        "API-integrated product flows with validation, loading states, error states, QA follow-up, and release monitoring.",
+        "Stripe Checkout implementation across the checkout UX and API integration path, with no reported checkout defects after release.",
+      ],
+    },
+    {
+      heading: "Engineering Proof",
+      body: [
+        "Introduced frontend testing from zero coverage with Vitest, React Testing Library, MSW, and Playwright.",
+        "Worked on a design-system migration from Styled Components and Storybook 8 toward Radix UI, Tailwind CSS, and Storybook 10.",
+        "Use AI-assisted engineering workflows for planning, code review, product briefs, and team workshops.",
+      ],
+    },
+  ],
+  actions: [
+    {
+      label: "Open Portfolio",
+      windowKey: "finder",
+      locationType: "work",
+    },
+    {
+      label: "View Resume",
+      windowKey: "resume",
+    },
+    {
+      label: "Contact",
+      windowKey: "contact",
+    },
+  ],
+};
+
+const mobileLauncherApps = [
+  {
+    id: "start-here",
+    name: "Start Here",
+    icon: "/images/txt.png",
+    windowKey: "txtfile",
+    data: startHereFile,
+    featured: true,
+  },
+  {
+    id: "portfolio",
+    name: "Portfolio",
+    icon: "/images/finder.png",
+    windowKey: "finder",
+    locationType: "work",
+  },
+  {
+    id: "resume",
+    name: "Resume",
+    icon: "/images/pages.png",
+    windowKey: "resume",
+  },
+  {
+    id: "contact",
+    name: "Contact",
+    icon: "/images/contact.png",
+    windowKey: "contact",
+  },
+  {
+    id: "skills",
+    name: "Skills",
+    icon: "/images/terminal.png",
+    windowKey: "terminal",
+  },
+  {
+    id: "testimonials",
+    name: "Testimonials",
+    icon: "/images/safari.png",
+    windowKey: "safari",
+  },
+];
+
 export {
   navLinks,
   navIcons,
@@ -221,6 +310,8 @@ export {
   techStack,
   socials,
   photosLinks,
+  startHereFile,
+  mobileLauncherApps,
 };
 
 const WORK_LOCATION = {
