@@ -586,17 +586,22 @@ body {
     }
 
     .content {
-      @apply flex-1 p-8 bg-white max-w-2xl relative;
+      @apply flex-1 overflow-y-auto bg-white p-8;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+      grid-auto-rows: 8.75rem;
+      gap: 1.5rem;
+      align-content: start;
 
       li {
-        @apply absolute flex items-center flex-col gap-3;
+        @apply static flex min-w-0 flex-col items-center justify-start gap-3 rounded-md p-2 transition-colors hover:bg-blue-50;
 
         img {
-          @apply object-contain object-center size-16 relative group-hover:scale-105;
+          @apply size-16 object-contain object-center;
         }
 
         p {
-          @apply text-sm text-center font-medium w-40;
+          @apply w-full break-words text-center text-xs font-medium leading-tight text-gray-800 line-clamp-2;
         }
       }
     }
@@ -626,7 +631,7 @@ body {
             }
 
             .item-name {
-              @apply text-xs text-center text-black font-medium line-clamp-2 w-full px-1;
+              @apply w-full min-w-0 break-words px-1 text-center text-xs font-medium leading-tight text-black line-clamp-2;
             }
           }
         }

@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { ChevronRight, Folder } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import MobileWindowWrapper from "#hoc/MobileWindowWrapper";
 import MobileWindowHeader from "#components/mobile/WindowHeader";
 import useWindowStore from "#store/window";
 import { locations } from "#constants";
+import { openExternal } from "#lib/openExternal";
 
 const MobileFinderContent = () => {
   const { closeWindow, openWindow } = useWindowStore();
@@ -40,7 +41,7 @@ const MobileFinderContent = () => {
     if (item.fileType === "pdf") {
       openWindow("resume");
     } else if (["fig", "url"].includes(item.fileType) && item.href) {
-      window.open(item.href, "_blank");
+      openExternal(item.href);
     } else {
       openWindow(`${item.fileType}${item.kind}`, item);
     }

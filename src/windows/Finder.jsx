@@ -1,47 +1,27 @@
 import { WindowControlls } from "#components";
 import { locations } from "#constants";
 import WindowWrapper from "#hoc/WindowWrapper";
+import { openExternal } from "#lib/openExternal";
 import useLocationStore from "#store/location";
 import useWindowStore from "#store/window";
 import clsx from "clsx";
 import { Search } from "lucide-react";
-import React, { useLayoutEffect, useRef } from "react";
-import { Draggable } from "gsap/Draggable";
+import React from "react";
 
 const Finder = () => {
   const { activeLocation, setActiveLocation } = useLocationStore();
   const { openWindow } = useWindowStore();
 
-  const contentRef = useRef(null);
-  const itemRefs = useRef([]);
-
   const openItem = (item) => {
     if (item.fileType === "pdf") return openWindow("resume");
     if (item.kind === "folder") return setActiveLocation(item);
-    if (["fig", "url"].includes(item.fileType) && item.href)
-      return window.open(item.href, "_blank");
+    if (["fig", "url"].includes(item.fileType) && item.href) {
+      openExternal(item.href);
+      return;
+    }
 
     openWindow(`${item.fileType}${item.kind}`, item);
   };
-
-  useLayoutEffect(() => {
-    const bounds = contentRef.current;
-    if (!bounds) return;
-
-    const instances = itemRefs.current.filter(Boolean).map(
-      (el) =>
-        Draggable.create(el, {
-          type: "x,y",
-          bounds,
-          cursor: "pointer",
-          activeCursor: "grabbing",
-        })[0],
-    );
-
-    return () => {
-      instances.forEach((instance) => instance.kill());
-    };
-  }, [activeLocation]);
 
   const renderList = (items) =>
     items.map((item) => (
@@ -76,14 +56,11 @@ const Finder = () => {
           </div>
         </div>
 
-        <ul className="content" ref={contentRef}>
-          {activeLocation?.children.map((item, index) => (
+        <ul className="content">
+          {activeLocation?.children.map((item) => (
             <li
               key={item.id}
-              className={clsx(item.position, "cursor-pointer")}
-              ref={(el) => {
-                itemRefs.current[index] = el;
-              }}
+              className="cursor-pointer"
               onClick={() => openItem(item)}
             >
               <img src={item.icon} alt={item.name} />
