@@ -301,6 +301,243 @@ const mobileLauncherApps = [
   },
 ];
 
+const projectCaseStudies = {
+  greenState: {
+    id: 1,
+    name: "case-study.txt",
+    icon: "/images/txt.png",
+    kind: "file",
+    fileType: "txt",
+    subtitle: "GreenState / ClickMind",
+    sections: [
+      {
+        heading: "Role",
+        body: [
+          "Frontend Developer on a production React and TypeScript product used by 20k+ active users across Europe.",
+        ],
+      },
+      {
+        heading: "What I Built",
+        body: [
+          "API-integrated product flows with validation, loading states, error states, QA follow-up, and release monitoring.",
+          "Stripe Checkout across the checkout UX and API integration path.",
+          "Frontend testing introduced from zero coverage with Vitest, React Testing Library, MSW, and Playwright.",
+          "Design-system migration work from Styled Components and Storybook 8 toward Radix UI, Tailwind CSS, and Storybook 10.",
+        ],
+      },
+      {
+        heading: "Tech Stack",
+        body: [
+          "React, TypeScript, Stripe Checkout, REST and GraphQL BFF integrations, Vitest, React Testing Library, MSW, Playwright, Storybook, Radix UI, Tailwind CSS.",
+        ],
+      },
+      {
+        heading: "Product / Business Value",
+        body: [
+          "Improved confidence in production product changes by pairing UX delivery with validation, regression coverage, QA follow-up, and release monitoring.",
+        ],
+      },
+      {
+        heading: "Result or Current Status",
+        body: [
+          "Current production work at GreenState AG / ClickMind.com. Stripe Checkout shipped with no reported checkout defects after release.",
+        ],
+      },
+    ],
+  },
+  mobileProductLab: {
+    id: 1,
+    name: "case-study.txt",
+    icon: "/images/txt.png",
+    kind: "file",
+    fileType: "txt",
+    subtitle: "Mobile Product Lab",
+    sections: [
+      {
+        heading: "Role",
+        body: [
+          "Product owner and developer for React Native and Expo mobile product builds.",
+        ],
+      },
+      {
+        heading: "What I Built",
+        body: [
+          "Sveznalica, an educational app currently in Google Play closed testing.",
+          "PSFM Diet Tracker, a mobile-first diet tracking product with reusable screens, forms, stateful flows, and API-ready boundaries.",
+        ],
+      },
+      {
+        heading: "Tech Stack",
+        body: [
+          "React Native, Expo, Android build tooling, reusable mobile UI patterns, navigation, form flows, stateful product screens.",
+        ],
+      },
+      {
+        heading: "Product / Business Value",
+        body: [
+          "Shows ownership beyond web UI: mobile product structure, release-readiness work, device testing, and iteration toward store distribution.",
+        ],
+      },
+      {
+        heading: "Result or Current Status",
+        body: [
+          "Sveznalica is in Google Play closed testing. PSFM Diet Tracker is structured for future data/API integration without reshaping the main flows.",
+        ],
+      },
+    ],
+  },
+  driveTeam: {
+    id: 1,
+    name: "case-study.txt",
+    icon: "/images/txt.png",
+    kind: "file",
+    fileType: "txt",
+    subtitle: "Auto Skola Drive Team",
+    sections: [
+      {
+        heading: "Role",
+        body: [
+          "Frontend developer for a polished business website for a driving school in Novi Sad.",
+        ],
+      },
+      {
+        heading: "What I Built",
+        body: [
+          "Responsive landing page with pricing, sign-up, FAQ, and credibility-focused content flow.",
+        ],
+      },
+      {
+        heading: "Tech Stack",
+        body: [
+          "Next.js, Tailwind CSS, Framer Motion, responsive UI implementation.",
+        ],
+      },
+      {
+        heading: "Product / Business Value",
+        body: [
+          "Reduced friction for prospective students by making pricing, enrollment, and common questions easy to scan on mobile and desktop.",
+        ],
+      },
+      {
+        heading: "Result or Current Status",
+        body: ["Live production site at autoskoladt.rs."],
+      },
+    ],
+  },
+  pejovicInvest: {
+    id: 1,
+    name: "case-study.txt",
+    icon: "/images/txt.png",
+    kind: "file",
+    fileType: "txt",
+    subtitle: "Pejovic Invest Website",
+    sections: [
+      {
+        heading: "Role",
+        body: [
+          "Frontend developer for a construction-company website focused on trust, project discovery, and maintainable content.",
+        ],
+      },
+      {
+        heading: "What I Built",
+        body: [
+          "Responsive company website with project content managed through Sanity CMS.",
+        ],
+      },
+      {
+        heading: "Tech Stack",
+        body: ["Next.js, Tailwind CSS, Sanity CMS, structured content modeling."],
+      },
+      {
+        heading: "Product / Business Value",
+        body: [
+          "Gave the company a credible web presence and a content workflow that allows project updates without developer handoff.",
+        ],
+      },
+      {
+        heading: "Result or Current Status",
+        body: ["Live production site at pejovic-invest.rs."],
+      },
+    ],
+  },
+  proDecor: {
+    id: 1,
+    name: "case-study.txt",
+    icon: "/images/txt.png",
+    kind: "file",
+    fileType: "txt",
+    subtitle: "Pro Decor Website",
+    sections: [
+      {
+        heading: "Role",
+        body: [
+          "Frontend developer for a product showcase website for 3D and PVC wall panels.",
+        ],
+      },
+      {
+        heading: "What I Built",
+        body: [
+          "Responsive product presentation with organized categories and visual browsing for buyers.",
+        ],
+      },
+      {
+        heading: "Tech Stack",
+        body: [
+          "Next.js, TypeScript, Tailwind CSS, responsive product-gallery UI.",
+        ],
+      },
+      {
+        heading: "Product / Business Value",
+        body: [
+          "Made the product catalog easier to browse visually while keeping the interface fast and direct.",
+        ],
+      },
+      {
+        heading: "Result or Current Status",
+        body: ["Live production site at pro-deco.rs."],
+      },
+    ],
+  },
+  agileOnion: {
+    id: 1,
+    name: "case-study.txt",
+    icon: "/images/txt.png",
+    kind: "file",
+    fileType: "txt",
+    subtitle: "Agile Onion Blog",
+    sections: [
+      {
+        heading: "Role",
+        body: [
+          "Frontend developer for a content-driven blog about agile, scrum, and personal development.",
+        ],
+      },
+      {
+        heading: "What I Built",
+        body: [
+          "SEO-friendly blog structure with SSG/ISR pages and Sanity CMS publishing.",
+        ],
+      },
+      {
+        heading: "Tech Stack",
+        body: [
+          "Next.js, Sanity CMS, static generation, incremental static regeneration, responsive content UI.",
+        ],
+      },
+      {
+        heading: "Product / Business Value",
+        body: [
+          "Enabled structured authoring and fast article pages for ongoing publishing.",
+        ],
+      },
+      {
+        heading: "Result or Current Status",
+        body: ["Live production site at agileonion.rs."],
+      },
+    ],
+  },
+};
+
 export {
   navLinks,
   navIcons,
@@ -312,6 +549,7 @@ export {
   photosLinks,
   startHereFile,
   mobileLauncherApps,
+  projectCaseStudies,
 };
 
 const WORK_LOCATION = {
@@ -329,42 +567,14 @@ const WORK_LOCATION = {
       position: "top-10 left-5",
       windowPosition: "top-[6vh] left-5",
       children: [
-        {
-          id: 1,
-          name: "production-impact.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 left-10",
-          subtitle: "Production React product work for 20k+ active users",
-          description: [
-            "Frontend Developer at GreenState AG / ClickMind.com, shipping product features in a multi-tenant React and TypeScript application used by 20k+ active users across Europe.",
-            "Own product flows from UX and API contract coordination through validation, loading and error states, QA follow-up, and release monitoring.",
-            "Implemented Stripe Checkout across the checkout UX and API integration path, with no reported checkout defects after release.",
-          ],
-        },
+        projectCaseStudies.greenState,
         {
           id: 2,
-          name: "testing-ai-workflows.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-40 right-20",
-          subtitle: "Testing coverage and AI-assisted engineering",
-          description: [
-            "Introduced frontend testing from zero coverage with Vitest, React Testing Library, MSW, and Playwright across unit, API-mocked, integration, and browser-level regression checks.",
-            "Helped lead a design-system migration from Styled Components and Storybook 8 toward Radix UI, Tailwind CSS, and Storybook 10 using a strangler approach.",
-            "Ran team workshops on agentic development workflows and connected Jira/Confluence context to IT-ready product briefs using AI-assisted planning patterns.",
-          ],
-        },
-        {
-          id: 3,
           name: "clickmind.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
           href: "https://www.clickmind.com/",
-          position: "top-10 right-20",
         },
       ],
     },
@@ -375,34 +585,7 @@ const WORK_LOCATION = {
       kind: "folder",
       position: "top-52 left-5",
       windowPosition: "top-[27vh] left-5",
-      children: [
-        {
-          id: 1,
-          name: "sveznalica.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 left-10",
-          subtitle: "React Native educational app",
-          description: [
-            "Built Sveznalica, a React Native and Expo educational app currently in Google Play closed testing.",
-            "Owned mobile UI, navigation, Android build and testing flow, store-readiness work, and iteration toward a releasable product.",
-          ],
-        },
-        {
-          id: 2,
-          name: "psfm-diet-tracker.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-40 right-20",
-          subtitle: "Mobile-first diet tracking product",
-          description: [
-            "Built PSFM Diet Tracker as a React Native and Expo product with reusable screens, forms, stateful flows, and mobile-first UX.",
-            "Structured the app with API-ready boundaries so data integrations can be added without reshaping the main user flows.",
-          ],
-        },
-      ],
+      children: [projectCaseStudies.mobileProductLab],
     },
     // ▶ Project 1
     {
@@ -413,20 +596,7 @@ const WORK_LOCATION = {
       position: "top-10 left-60", // icon position inside Finder
       windowPosition: "top-[48vh] left-5", // optional: Finder window position
       children: [
-        {
-          id: 1,
-          name: "Drive Team Project.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 left-10",
-          description: [
-            "A modern, responsive landing page for Auto Skola Drive Team in Novi Sad.",
-            "Built with Next.js, Tailwind CSS, and Framer Motion for a fast, polished first impression.",
-            "Structured pricing, sign-up, and FAQ flows to reduce friction for new students and drive inquiries.",
-            "Designed the UI to feel clear, credible, and easy to scan across devices.",
-          ],
-        },
+        projectCaseStudies.driveTeam,
         {
           id: 2,
           name: "autoskoladt.rs",
@@ -434,15 +604,13 @@ const WORK_LOCATION = {
           kind: "file",
           fileType: "url",
           href: "https://www.autoskoladt.rs/",
-          position: "top-10 right-20",
         },
         {
-          id: 4,
+          id: 3,
           name: "drive-team.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
-          position: "top-52 right-80",
           imageUrl: "/images/DriveTeamPic.png",
         },
       ],
@@ -457,19 +625,7 @@ const WORK_LOCATION = {
       position: "top-52 right-80",
       windowPosition: "top-[6vh] right-5",
       children: [
-        {
-          id: 1,
-          name: "Pejovic Invest Project.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 right-10",
-          description: [
-            "A clean, professional website for a Serbian construction company, focused on trust and project discovery.",
-            "Content is managed in Sanity CMS so the team can update construction projects without developer handoff.",
-            "Built with Next.js and Tailwind CSS with a content structure designed for credibility and easy scanning.",
-          ],
-        },
+        projectCaseStudies.pejovicInvest,
         {
           id: 2,
           name: "pejovic-invest.rs",
@@ -477,15 +633,13 @@ const WORK_LOCATION = {
           kind: "file",
           fileType: "url",
           href: "https://www.pejovic-invest.rs/",
-          position: "top-20 left-20",
         },
         {
-          id: 4,
+          id: 3,
           name: "pejovic-invest.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
-          position: "top-52 left-80",
           imageUrl: "/images/pejovicInvestSS.png",
         },
       ],
@@ -500,19 +654,7 @@ const WORK_LOCATION = {
       position: "top-10 left-80",
       windowPosition: "top-[27vh] right-5",
       children: [
-        {
-          id: 1,
-          name: "Pro Decor Project.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 left-10",
-          description: [
-            "A presentation website for Pro Decor, specializing in 3D and PVC wall panels.",
-            "Organized product categories and galleries so buyers can browse materials visually and quickly.",
-            "Built with Next.js, TypeScript, and Tailwind CSS for a crisp, responsive product showcase.",
-          ],
-        },
+        projectCaseStudies.proDecor,
         {
           id: 2,
           name: "pro-deco.rs",
@@ -520,15 +662,13 @@ const WORK_LOCATION = {
           kind: "file",
           fileType: "url",
           href: "https://www.pro-deco.rs/",
-          position: "top-10 right-20",
         },
         {
-          id: 4,
+          id: 3,
           name: "pro-decor.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
-          position: "top-52 right-80",
           imageUrl: "/images/prodecorSS.png",
         },
       ],
@@ -542,19 +682,7 @@ const WORK_LOCATION = {
       position: "top-52 left-60",
       windowPosition: "top-[48vh] right-5",
       children: [
-        {
-          id: 1,
-          name: "Agile Onion Project.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 left-10",
-          description: [
-            "A content-driven blog about agile, scrum, and personal development.",
-            "Built with Next.js using SSG and ISR so pages stay fast while content can be refreshed.",
-            "Powered by Sanity CMS for structured authoring, SEO-friendly pages, and easy publishing.",
-          ],
-        },
+        projectCaseStudies.agileOnion,
         {
           id: 2,
           name: "agileonion.rs",
@@ -562,15 +690,13 @@ const WORK_LOCATION = {
           kind: "file",
           fileType: "url",
           href: "https://agileonion.rs/",
-          position: "top-10 right-20",
         },
         {
-          id: 4,
+          id: 3,
           name: "agile-onion.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
-          position: "top-52 right-80",
           imageUrl: "/images/agileonion.png",
         },
       ],
