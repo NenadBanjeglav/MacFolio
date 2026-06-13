@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
+import { Analytics } from "@vercel/analytics/react";
 import {
   Dock,
   Home,
@@ -54,6 +55,7 @@ const App = () => {
       <MobileText />
       <MobileImage />
       <MobileHome />
+      <Analytics />
     </main>
   );
 };
