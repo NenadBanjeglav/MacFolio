@@ -15,6 +15,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 const Resume = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
+  const [numPages, setNumPages] = useState(0);
 
   return (
     <>
@@ -35,7 +36,11 @@ const Resume = () => {
       <Document
         className="resume-pdf"
         file="files/resume.pdf"
-        onLoadSuccess={() => setIsLoading(false)}
+        onLoadSuccess={({ numPages }) => {
+          setNumPages(numPages);
+          setIsLoading(false);
+          setHasError(false);
+        }}
         onLoadError={() => {
           setIsLoading(false);
           setHasError(true);
@@ -69,7 +74,14 @@ const Resume = () => {
         }
       >
         {!isLoading && !hasError ? (
-          <Page pageNumber={1} renderTextLayer renderAnnotationLayer />
+          Array.from({ length: numPages }, (_, index) => (
+            <Page
+              key={`resume-page-${index + 1}`}
+              pageNumber={index + 1}
+              renderTextLayer
+              renderAnnotationLayer
+            />
+          ))
         ) : null}
       </Document>
     </>

@@ -491,7 +491,7 @@ body {
   }
 
   #resume {
-    @apply w-fit h-fit absolute top-16 left-7/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-sm:hidden;
+    @apply w-fit h-fit max-h-[calc(100vh-5rem)] absolute top-16 left-7/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-sm:hidden;
 
     .window-header {
       h2 {
@@ -500,11 +500,11 @@ body {
     }
 
     .resume-pdf {
-      @apply flex items-center justify-center min-h-[480px] bg-white;
+      @apply flex max-h-[calc(100vh-8rem)] min-h-[480px] flex-col items-center justify-start gap-6 overflow-y-auto bg-white p-10;
     }
 
     .resume-loading {
-      @apply flex flex-col items-center justify-center gap-4 p-10 text-sm text-gray-500;
+      @apply flex min-h-[480px] flex-col items-center justify-center gap-4 text-sm text-gray-500;
     }
 
     .resume-link {
@@ -549,7 +549,7 @@ body {
     @apply w-screen h-screen bg-white select-none absolute top-0 pt-20 z-60 sm:hidden overflow-y-auto;
 
     .resume-pdf {
-      @apply w-full h-fit object-contain object-center;
+      @apply flex w-full h-fit flex-col items-center gap-4 object-contain object-center pb-8;
     }
 
     .resume-loading {

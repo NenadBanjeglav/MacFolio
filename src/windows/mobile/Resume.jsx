@@ -15,6 +15,7 @@ const MobileResumeContent = () => {
   const containerRef = useRef(null);
   const [containerWidth, setContainerWidth] = useState(0);
   const [hasError, setHasError] = useState(false);
+  const [numPages, setNumPages] = useState(0);
 
   useLayoutEffect(() => {
     if (!containerRef.current) return;
@@ -43,6 +44,10 @@ const MobileResumeContent = () => {
         <Document
           className="resume-pdf"
           file="files/resume.pdf"
+          onLoadSuccess={({ numPages }) => {
+            setNumPages(numPages);
+            setHasError(false);
+          }}
           onLoadError={() => setHasError(true)}
           error={
             <div className="resume-loading">
@@ -65,17 +70,20 @@ const MobileResumeContent = () => {
           noData={null}
         >
           {!hasError ? (
-            <Page
-              pageNumber={1}
-              width={containerWidth || undefined}
-              renderTextLayer
-              renderAnnotationLayer
-              loading={
-                <div className="resume-loading">
-                  <span className="resume-spinner" aria-hidden="true" />
-                </div>
-              }
-            />
+            Array.from({ length: numPages }, (_, index) => (
+              <Page
+                key={`mobile-resume-page-${index + 1}`}
+                pageNumber={index + 1}
+                width={containerWidth || undefined}
+                renderTextLayer
+                renderAnnotationLayer
+                loading={
+                  <div className="resume-loading">
+                    <span className="resume-spinner" aria-hidden="true" />
+                  </div>
+                }
+              />
+            ))
           ) : null}
         </Document>
       </div>
